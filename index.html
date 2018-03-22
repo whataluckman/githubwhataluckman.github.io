@@ -9,19 +9,23 @@
 
 <body>
 
-<div class="container-fluid">
-			<div class="jumbotron" style="margin-bottom: 0;">
-				<h1>
-					刘思宇的个人网站
+<div class="container">
+			<div class="jumbotron" id="header">
+				<h1 class="text-center" style="font-family: 微软雅黑;">
+					刘思宇<small style="color: #333;"> 的个人简历</small>
 				</h1>
-				<p>
-					目前主要提供简历以供浏览
-				</p>
 			</div>
-			<div class="navbar navbar-default">
+			<div class="navbar navbar-default" style="margin: 0 -15px;">
 	<div class="container-fluid">
+		<div class="navbar-brand visible-xs visible-sm">
+			<label for="open">
+				<span class="glyphicon glyphicon-play"></span>
+				<button id="open" class="hidden"></button>
+				<span class="navbar-text">点击展开</span>
+			</label>
+		</div>
 		<div class="navbar-header">
-			<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsednav">
+			<button id="open-button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsednav">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -67,6 +71,12 @@
 	<div class="row">
 		<div class="col-md-6" id="xinxi">
 			<h3>
+				个人照片
+			</h3>
+			<img src="1.jpg" class="img-responsive"/>
+		</div>
+		<div class="col-md-6" id="xinxi">
+			<h3>
 				个人信息
 			</h3>
 				<div>
@@ -99,7 +109,7 @@
 							现居住地
 						</dt>
 						<dd>
-							成都市双流区
+							成都市双流区航空港
 						</dd>
 						<dt>
 							政治面貌
@@ -122,6 +132,20 @@
 					</dl>
 				</div>
 		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col-md-6" id="pingjia">
+			<h3>
+				自我评价
+			</h3>
+			<p>
+				性格安静沉稳，乐于接受新鲜事物，对与自己专业不相关的领域也充满兴趣，善于听取别人的意见和建议。我的本科专业是网络工程，
+				偏向于硬件的使用和维护，但是我通过自己的努力，学会了静态网页的制作，<span class="text-danger">熟悉HTML和JavaScript的使用，
+				对PHP也有一定程度的了解，除此之外我还会Vegas、Photoshop这样的后期软件</span>，曾经为学校的勤工俭学中心剪辑过宣传片，
+				我在自己的专业学习成绩优异，毕业论文也已经完成，入职基本不会被学业原因影响，“脚踏实地，专注细致”是我初入社会的目标，希望HR能给我一个施展抱负的机会。
+			</p>
+		</div>
 		<div class="col-md-6" id="yixiang">
 			<h3>
 				求职意向
@@ -131,7 +155,7 @@
 							期望职业:
 						</dt>
 						<dd>
-							web前端工程师
+							网页设计/制作/美工、网站编辑、产品销售
 						</dd>
 						<dt>
 							期望行业:
@@ -143,13 +167,13 @@
 							工作地区:
 						</dt>
 						<dd>
-							成都
+							成都、重庆、上海、广州、杭州等
 						</dd>
 						<dt>
 							期望月薪:
 						</dt>
 						<dd>
-							4000-7000
+							3000-5000
 						</dd>
 						<dt>
 							目前状况:
@@ -158,16 +182,6 @@
 					应届毕业生
 				</dd>				
 			</dl>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-6" id="pingjia">
-			<h3>
-				自我评价
-			</h3>
-			<p>
-				我学习能力强，对自己感兴趣的事物有会花时间，而我本来就喜欢网站前端的开发，我熟悉Bootstrap框架下使用jQuery开发的模式，配合PHP语言可以很轻松的使用AJAX技术，尽管我的本科专业是网络工程，我还是会Vegas、Photoshop这样的后期软件，所以在制作网页的时候，技术性问题之外没有太多的难题，我对自己的学习和工作有责任心，在我喜欢的领域我是一个完美主义者，我会全心全意的把工作做到最好；同时我是一个擅长做准备的人，学习工作中我从来不打没有准备的仗，目前我还没正式毕业，但是我的毕业设计和毕业论文已经完成，入职基本不会被学业原因影响，我对于加班不介意，希望对我有兴趣的公司可以给我一个机会。
-			</p>
 		</div>
 	</div>
 	
@@ -333,7 +347,7 @@
 				语言能力
 			</h3>
 			<p>
-				英语读写能力和听说能力良好，可以读懂大多数英语文献，与外国人可以进行基本的沟通交流。
+				英语读写能力和听说能力良好，可以读懂英语文献，与外国人可以进行基本的沟通交流。
 			</p>
 		</div>
 		<div class="col-md-4" id="jineng">
@@ -341,7 +355,7 @@
 				专业技能
 			</h3>
 			<p>
-				精通HTML5、JavaScript（JQuery）和Bootstrape，熟悉以PHP+MySQL作为网站的后端处理前端的数据，会PHOTOSHOP、VEGAS等后期软件的基本操作。
+				精通HTML5、JavaScript（JQuery）和Bootstrape，了解PHP，会PHOTOSHOP、VEGAS等后期软件的基本操作，熟练使用各类office办公软件。
 			</p>
 		</div>
 		<div class="col-md-4" id="aihao">
@@ -349,7 +363,7 @@
 				兴趣爱好
 			</h3>
 			<p>
-				从来不赌博抽烟酗酒，喜欢宅在家里玩单机游戏，会素描，爱好鬼畜并且自己也会做
+				没有赌博、抽烟、酗酒等不良嗜好，喜欢音乐，热爱历史，百家讲坛忠实观众，热爱绘画作品，曾获得素描等级证书。
 			</p>
 		</div>
 	</div>
@@ -365,11 +379,20 @@
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+	$('#open').on('click',function(){
+		$('#open-button').click();
+	});
+</script>
 </body>
 
 </html>
 <style>
-.row{
-	margin-bottom: 50px;
+
+#header{
+	margin: 0 -15px;
+	background: no-repeat;
+	background-size:100% ;
+	background-image: url(http://img01.jituwang.com/170624/256889-1F6240R12485.jpg);
 }
 </style>
