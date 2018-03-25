@@ -7,25 +7,25 @@
 <link href="https://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background:rgba(51,153,102,0.2);">
 
 <div class="container">
-			<div class="jumbotron" id="header">
+			<div class="jumbotron" id="header"> 
 				<h1 class="text-center" style="font-family: 微软雅黑;">
 					刘思宇<small style="color: #333;"> 的个人简历</small>
 				</h1>
 			</div>
-			<div class="navbar navbar-default" style="margin: 0 -15px;">
+			<div class="navbar navbar-default" style="margin: 0 -15px; border-radius: 0;">
 	<div class="container-fluid">
 		<div class="navbar-brand visible-xs visible-sm">
 			<label for="open">
-				<span class="glyphicon glyphicon-play"></span>
+				<span id="open_button" class="glyphicon glyphicon-chevron-right"></span>
+				click for more
 				<button id="open" class="hidden"></button>
-				<span class="navbar-text">点击展开</span>
 			</label>
 		</div>
 		<div class="navbar-header">
-			<button id="open-button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsednav">
+			<button id="open-button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsednav" style="display: none;">
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -71,12 +71,14 @@
 	<div class="row">
 		<div class="col-md-6" id="xinxi">
 			<h3>
+				<span class="glyphicon glyphicon-user"></span>
 				个人照片
 			</h3>
-			<img src="1.jpg" class="img-responsive"/>
+			<img src="1.jpg" class="img-responsive img-circle"/>
 		</div>
 		<div class="col-md-6" id="xinxi">
 			<h3>
+				<span class="glyphicon glyphicon-info-sign"></span>
 				个人信息
 			</h3>
 				<div>
@@ -115,7 +117,7 @@
 							政治面貌
 						</dt>
 						<dd>
-							群众
+							共青团员
 						</dd>
 						<dt>
 							联系电话
@@ -137,6 +139,7 @@
 	<div class="row">
 		<div class="col-md-6" id="pingjia">
 			<h3>
+				<span class="glyphicon glyphicon-pencil"></span>
 				自我评价
 			</h3>
 			<p>
@@ -148,6 +151,7 @@
 		</div>
 		<div class="col-md-6" id="yixiang">
 			<h3>
+				<span class="glyphicon glyphicon-heart"></span>
 				求职意向
 			</h3>
 			<dl class="dl-horizontal">
@@ -189,6 +193,7 @@
 	<div class="row">
 		<div class="col-md-6" id="xiangmu">
 			<h3>
+				<span class="glyphicon glyphicon-book"></span>
 				项目经验1-<span>基于PHP+MySQL的cdkey零售网站</span>
 			</h3> 
 			<h4>
@@ -226,6 +231,7 @@
 		</div>
 		<div class="col-md-6">
 			<h3>
+				<span class="glyphicon glyphicon-book"></span>
 				项目经验2-<span>基于PHP+MySQL的小说网站</span>
 			</h3> 
 			<h4>
@@ -266,6 +272,7 @@
 
 		<div class="col-md-4" id="jiaoyu">
 			<h3>
+				<span class="glyphicon glyphicon-bookmark"></span>
 				教育经历
 			</h3>
 			<h4>
@@ -302,6 +309,7 @@
 		</div>
 		<div class="col-md-4" id="shijian">
 			<h3>
+				<span class="glyphicon glyphicon-check"></span>
 				在校实践经验
 			</h3>
 			<h4>
@@ -325,6 +333,7 @@
 		</div>
 		<div class="col-md-4" id="zhengshu">
 			<h3>
+				<span class="glyphicon glyphicon-tag"></span>
 				证书
 			</h3>
 			<h4>
@@ -344,6 +353,7 @@
 	<div class="row" >
 		<div class="col-md-4" id="yuyan">
 			<h3>
+				<span class="glyphicon glyphicon-flag"></span>
 				语言能力
 			</h3>
 			<p>
@@ -352,6 +362,7 @@
 		</div>
 		<div class="col-md-4" id="jineng">
 			<h3>
+				<span class="glyphicon glyphicon-screenshot"></span>
 				专业技能
 			</h3>
 			<p>
@@ -360,6 +371,7 @@
 		</div>
 		<div class="col-md-4" id="aihao">
 			<h3>
+				<span class="glyphicon glyphicon-heart-empty"></span>
 				兴趣爱好
 			</h3>
 			<p>
@@ -369,7 +381,10 @@
 	</div>
 	<div class="row">
 		<div class="col-md-4" id="fujian">
-			<h3>附件</h3>
+			<h3>
+				<span class="glyphicon glyphicon-download"></span>
+				附件
+			</h3>
 			<p>
 				项目经验2-基于PHP+MySQL的小说网站源码：<a target="_blank" href="https://share.weiyun.com/5gMbljc">https://share.weiyun.com/5gMbljc</a>
 			</p>
@@ -382,7 +397,16 @@
 <script>
 	$('#open').on('click',function(){
 		$('#open-button').click();
+		if($('#open_button').hasClass('glyphicon-chevron-right')){
+			$('#open_button').removeClass('glyphicon-chevron-right');
+			$('#open_button').addClass('glyphicon-chevron-down');
+		}else{
+			$('#open_button').removeClass('glyphicon-chevron-down');
+			$('#open_button').addClass('glyphicon-chevron-right');
+		}
 	});
+	
+	$('h3').addClass("page-header");
 </script>
 </body>
 
@@ -390,9 +414,17 @@
 <style>
 
 #header{
+	border-radius:0 ;
 	margin: 0 -15px;
 	background: no-repeat;
 	background-size:100% ;
 	background-image: url(http://img01.jituwang.com/170624/256889-1F6240R12485.jpg);
+}
+h3{
+	font-weight: bolder;
+	font-family:"微软雅黑" ;
+}
+.page-header{
+	border-bottom: 1px #333 solid;
 }
 </style>
